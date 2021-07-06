@@ -1,0 +1,84 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Red Neuronal </title>
+	<style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: skyblue;
+        }
+
+        .search-box{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background:#353b48;
+            height: 60px;
+            border-radius: 50px;
+            padding: 10px;
+        }
+
+        .search-box:hover .search-txt{
+            width: 200px;
+            padding: 0 6px;
+        }
+
+        .search-box:hover .search-btn{
+            background: #fff;
+        }
+
+
+        .search-btn{
+            color:#e84118;
+            float: right;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #487eb0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .search-txt{
+            border:none;
+            outline: none;
+            background: none;
+            float: left;
+            padding: 0;
+            color:#fff;
+            font-size: 16px;
+            line-height: 40px;
+            width: 0;
+            transition: width 400ms;
+
+        }
+    </style>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+    <h1 style="align-items: center; text-align: center; align-content: center; margin-top: 20%;">SEARCH GOOGLE</h1>
+	<div class="search-box">
+		<input type="text" class="search-txt" id="search" placeholder="Arama Yap">
+		<a class="search-btn" id="submit">
+			<i class="fas fa-search"></i>
+		</a>
+	</div>
+    <script>
+        $(document).ready(function(){
+            $(document).on("click","#submit",function () {
+                var variable = $("#search").val()
+                localStorage.setItem("search", variable)
+                window.open(`https://www.google.com/search?igu=1&ei=&q=` + localStorage.getItem("search"),"_self")
+            })
+        })
+        localStorage.clear()
+    </script>
+</body>
+</html>
