@@ -9,7 +9,7 @@ import string
 
 def Neuronal(key):
     def readCv():
-        spam_or_ham = pd.read_csv("spam.csv", encoding='uft-8')[["v1", "v2"]]
+        spam_or_ham = pd.read_csv("data.csv", encoding='uft-8')[["v1", "v2"]]
         spam_or_ham.columns = ["label", "text"]
         spam_or_ham.head()
         spam_or_ham["label"].value_counts()
@@ -22,7 +22,7 @@ def Neuronal(key):
                 if character not in punctuation:
                     new_token.append(character.lower())
             if new_token:
-                tokens.append("".join(new_token))
+                tokens.append(" ".join(new_token))
         return tokens
 
         spam_or_ham.head()["text"].apply(tokenize)

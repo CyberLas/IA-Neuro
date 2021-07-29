@@ -1,0 +1,10 @@
+Nombre,Ciudad,Id,Coordenadas,Google,Fecha,Busqueda, ms, bits            
+Arequipa,Cavana,104343,""8.44368, 50.51702"",No,05/24/2022,Esquisofrenia,1 ms,
+Arequipa,Luna Wana,12384,""13.44707, 131.79018"",No,07/28/2020,Trastornos,1 ms,0
+Cajamarca,Cajamarca,132442,""8.49754, -2.87157"",No,07/24/2020,Espazmos,1 ms,2
+Lima,Ate,2424,""-41.04807, 19.22817"",Yes,09/13/2021,Estres,1 ms,1
+Cuzco, Cuzco,12345,""-53.38082, 64.4979"",Yes,10/14/2021,Violencia,1 ms,4
+Cajamarca, Llacanora,16163 1126,""-52.56959, 157.75527"",Yes,09/02/2021,1 ms,
+Trujillo, Victoria,123445,""15.09421, -61.36254"",No,10/04/2020,esquizofrenia,1 ms,
+Cajamarca, San Pablo,d'Alba,1234234,""-84.6307, -60.3735"",Yes,02/04/202,1 ms,5
+Cajamarca, Celendín,123434,""19.18079, 140.42278"",No,07/21/2021,trastornos,1 ms,

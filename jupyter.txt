@@ -1,0 +1,58 @@
+#Librer�a a Utilizar
+#Librer�a para la manipulaci�n y an�lisis de datos
+import pandas as pd
+
+#Librer�a que produce figuras con calidad de publicaci�n en una variedad de formatos impresos.
+import matplotlib.pyplot as plt
+
+#Librer�a para trazar objecto en un plano
+import pylab as pl
+
+#Librer�a que proporciona un objeto de matriz multidimensional
+import numpy as np
+from scipy.stats import norm
+#Sus gr�ficos matplotlib se incluir�n en su cuaderno.
+%matplotlib inline
+
+
+#Nombre del Archivo
+df = pd.read_csv("Data.csv")
+#Guardar el Archivo en una Variable
+df.head()
+
+#Otener los datos delarreglo
+nuevo=pd.DataFrame(df)
+
+#Reemplazar datos de el array de datos
+nuevo=nuevo.replace(np.nan,"0")
+
+#Muestra los Grafico Obtenidos
+nuevo.head()
+
+#Seleccionar los Datos del Archivo CSV
+cdf = df[['Ciudad']]
+
+#Conjunto de datos de la Cabeza
+cdf.head(10)
+
+sample_data = np.normal(0, 0.1, 1)
+plt.hist(sample_data)
+
+#Preparar un gráfico con matplotlib
+fig, ax1 = plt.subplots()
+ax1.hist(sample_data, 30)
+
+# Crear el gráfico de una distribución Beta
+a = 5
+b = 10
+beta_draws = np.random.beta(a, b)
+# Editar las etiquetas
+ax1.set_ylabel('Ciudad')
+ax1.set_xlabel('Busqueda')
+
+# Añadir ejes adicionales a la figura
+ax2.hist(beta_draws)
+
+#Resultados para el Sistema Operativo
+result = pd.DataFrame(alumnos, dtype='category')
+result.so.value_counts().plot(kind='bar')
